@@ -1,0 +1,29 @@
+"""
+Let us associate heads with 1 and tails with 0
+"""
+
+
+import random
+
+NumHeads = 0
+NumTails = 0
+Trials = int(input())
+
+
+def toss():
+    if random.randint(0,1) == 1:
+        global NumHeads
+        NumHeads += 1
+    else:
+        global NumTails
+        NumTails += 1
+
+
+def headtail():
+    for i in range(Trials):
+        toss()
+
+    print('Number of heads out of',Trials,'is',NumHeads)
+    print('Number of tails out of',Trials,'is',NumTails)
+
+headtail()
