@@ -1,0 +1,27 @@
+"""
+The code below can be used to take two strings and check if they are anagrams, i.e.
+if they contain the same characters, symbols
+"""
+
+x = input()
+y = input()
+
+def ana(s1,s2):
+    s1 = s1.lower()
+    s2 = s2.lower()
+    s1 = list(s1)
+    s2 = list(s2)
+    s1.sort()
+    s2.sort()
+    verdict = True
+    if len(s1) != len(s2):
+        verdict = False
+    else:
+        for i in range(len(s1)):
+            if s1[i] == s2[i]:
+                i++1
+            else:
+                verdict = False
+    print(verdict)
+
+ana(x,y)
