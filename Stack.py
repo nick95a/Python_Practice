@@ -1,3 +1,9 @@
+'''
+Stack is an Abstract Data Type which operates on a LIFO (Last-In-First-Out) principle which distinguishes it from other abstract data types.
+LIFO implies that the most recently added element will be the first to be removed. Real-world examples of stacks involve basically any physical
+piles of things, for example, books.
+'''
+
 class Stack:
     '''
     Stack ADT is built on the standard list datatype in Python
