@@ -1,0 +1,19 @@
+"""
+Counts vowels in a given string
+"""
+
+s = input()
+vowels = ['a','e','i','u','o']
+d = dict.fromkeys(vowels,0)
+
+
+def countvowels(x):
+    counter = 0
+    for i in range(len(x)):
+        if x[i].lower() in vowels:
+            counter += 1
+            d[x[i].lower()] += 1
+    print(counter,"vowels and ",d)
+
+countvowels(s)
+

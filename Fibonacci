@@ -1,0 +1,18 @@
+"""
+Enter a number into the Fibo function and get all the numbers of the sequence leading up to it and including the number entered if
+it is in the sequence
+"""
+
+def fibo(n):
+    a = 0
+    b = 1
+    if(a == 0):
+        l.append(a)
+    while b <= n:
+        c = a + b
+        a = b
+        b = c
+        l.append(a)
+    print(l)
+
+fibo(#enter your number)

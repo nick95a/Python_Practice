@@ -1,0 +1,25 @@
+"""
+Have not adjusted it for complex words that use hyphens or whatever. Thus only works with one word regardless of the case
+"""
+
+s = input()
+consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z','W']
+new = []
+ending = 'ay'
+j = 0
+
+def consbegin(x):
+    i = 0
+    l = ''
+    while s[i].upper() in consonants:
+        new.append(s[i])
+        i += 1
+    l = ''.join(new)
+    return l
+
+if s[j].upper() in consonants:
+    addcons = consbegin(s)
+    newstring = s[len(addcons):] + addcons + ending
+    print(newstring)
+else:
+    print(s + endi

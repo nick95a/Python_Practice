@@ -1,0 +1,61 @@
+"""
+The following code should "read" positive numbers up to a million
+Did not bother to include floats and negative numbers yet
+Feel free to use
+"""
+
+
+n = 0;
+order = len(str(n))
+card = ['zero','one','two','three','four','five','six','seven','eight','nine']
+teen = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+tens = ['twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
+hun = 'hundred'
+k = 'thousand'
+m = 'million'
+
+
+def order1(x):
+    return card[int(str(x)[-1])]
+
+def order2(x):
+    if str(x)[0] == '1':
+        return teen[int(str(x)[0])]
+    else:
+        return tens[int(str(x)[0])-2] + " " + order1(x)
+
+def order3(x):
+    return card[int(str(x)[0])] + " " + hun + " " + order2(int(str(x)[1:]))
+
+def order4(x):
+    return card[int(str(x)[0])] + " " + k + " " + order3(int(str(x)[1:]))
+
+def order5(x):
+    return tens[int(str(x)[0])-2] + " " + order4(int(str(x)[1:]))
+
+
+def order6(x):
+    return card[int(str(x)[0])] + " " + hun + " " + order5(int(str(x)[1:]))
+
+def printer(foo,*args):
+    global n
+    n = args[0]
+    print(foo(args[0]))
+
+def foochooser(x):
+    if len(str(x)) == 1:
+        printer(order1,x)
+    elif len(str(x)) == 2:
+        printer(order2,x)
+    elif len(str(x)) == 3:
+        printer(order3,x)
+    elif len(str(x)) == 4:
+        printer(order4,x)
+    elif len(str(x)) == 5:
+        printer(order5,x)
+    elif len(str(x)) == 6:
+        printer(order6,x)
+
+
+
+

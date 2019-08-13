@@ -1,0 +1,22 @@
+"""
+I have not optimised the code. Did this quite quickly. Not even sure that it is correct :) 
+Feel free to comment and advise so that I learn and come back and update the code.
+
+"""
+
+
+
+
+n = int(input()
+i = 2
+P = [v for v in range(n+1)]
+P[0] = 'Not Prime'
+P[1] = 'Not Prime'
+
+while i**2 <= n:
+    for j in [i**2 + k*i  for k in range(0, n - i**2)]:
+        if j <= n:
+            P[j] = 'Not Prime'
+    i += 1
+
+#Then print the output and only the prime numbers will be displayed, the rest will have the string "Not Prime"
