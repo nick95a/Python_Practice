@@ -1,3 +1,7 @@
+'''
+See the Auth.py file in this directory for more details
+'''
+
 class AuthException(Exception):
 
     def __init__(self, username = "", user = None):
