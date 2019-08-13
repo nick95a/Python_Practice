@@ -1,3 +1,9 @@
+'''
+This file was written based mostly on the code from the book "Python 3. Object-Oriented Programming" by Dusty Phillips with some very minor changes.
+It is intended for educational and practice purposes only.
+'''
+
+
 # By the way, this is a very bad import statement. I only used it because
 # I did not want to list all the errors one by one. Never import with * unless
 # you are extremely comfortable in what you are doing
